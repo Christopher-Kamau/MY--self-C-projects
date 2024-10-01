@@ -1,0 +1,16 @@
+// for loop 
+#include <stdio.h>
+
+int main() {
+    
+    // for(start; stop; step)
+    int c, sum=0;
+    for(c=100; c>0; c--){
+    printf("%d \n",c);
+    sum = sum + c;
+    //sum +=i;
+}
+printf("The sum is %d",sum);
+
+    return 0;
+}
