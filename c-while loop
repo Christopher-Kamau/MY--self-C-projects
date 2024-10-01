@@ -1,0 +1,15 @@
+// for loop 
+#include <stdio.h>
+
+int main() {
+    
+    // for(start; stop; step)
+    int c=20;
+    while (c>0) {
+    printf("%d \n",c);
+c=c-1; 
+}
+    
+printf("Loop body finished");
+    return 0;
+}
