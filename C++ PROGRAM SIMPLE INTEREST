@@ -1,0 +1,26 @@
+// Online C++ compiler to run C++ program online
+/*
+Name;
+Reg no;
+Description;Program to compute simple interest
+*/
+
+#include <iostream>
+using namespace std;
+
+//function prototype
+float simple_interest(float rate,int time,int principle);
+
+int main() {
+    //function call
+    float s_interest;
+    s_interest=simple_interest(10,5,20000);
+    cout<<"The Simple Interest is"<<s_interest<<endl;
+}
+
+//function defination
+float simple_interest(float rate,int time,int principle) {
+     float interest;principle*rate/100*time;
+     return interest;
+}
+    
