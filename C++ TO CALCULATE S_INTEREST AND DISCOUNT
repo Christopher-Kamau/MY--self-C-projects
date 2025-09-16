@@ -1,0 +1,52 @@
+/*
+Name: [Your Name]
+Reg no: [Your Reg No]
+Description: Program to compute simple interest and apply discount
+*/
+
+#include <iostream>
+#include <iomanip>  // for setprecision
+using namespace std;
+
+// Function prototype
+float simple_interest(float rate, int time, int principle);
+
+int main() {
+    // Function call with sample values
+    float s_interest = simple_interest(10, 5, 20000);
+
+    // Output formatting
+    cout << fixed << setprecision(2);
+    cout << "The Simple Interest is " << s_interest << endl;
+
+    // Calculate total amount
+    float totalAmount = 20000 + s_interest;
+
+    // Calculate discount
+    float discount = 0;
+    if (s_interest > 5000) {
+        discount = totalAmount * 0.10;  // 10% discount
+    } else if (s_interest >= 1000 && s_interest <= 5000) {
+        discount = totalAmount * 0.05;  // 5% discount
+    } else {
+        discount = 0;  // No discount
+    }
+
+    float amountAfterDiscount = totalAmount - discount;
+
+    // Output results
+    if (discount > 0) {
+        cout << "Discount Applied: " << discount << endl;
+        cout << "Amount After Discount: " << amountAfterDiscount << endl;
+    } else {
+        cout << "No discount applied." << endl;
+    }
+
+    return 0;
+}
+
+// Function definition
+float simple_interest(float rate, int time, int principle) {
+    float interest = principle * rate / 100 * time;
+    return interest;
+}
