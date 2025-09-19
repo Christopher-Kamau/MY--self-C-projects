@@ -1,0 +1,22 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+   int prev2 = 0; //first fibonacci number
+   int prev1 = 1; //second fibonacci number
+   int newFibo; //variable to store the next number
+   
+     printf("%d\n", prev2);
+    printf("%d\n", prev1);
+
+    for (int i = 2; i < 20; i++) {  // generate 18 more numbers
+        newFibo = prev1 + prev2;
+        printf("%d\n", newFibo);
+
+        // update values
+        prev2 = prev1;
+        prev1 = newFibo;
+    }
+
+    return 0;
+}
